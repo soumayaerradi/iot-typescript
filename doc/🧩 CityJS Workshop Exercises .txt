@@ -1,0 +1,149 @@
+# CityJS Workshop Exercises
+
+*TypeScript + Johnny-Five + Fun*
+
+------
+
+## Part 1: Photoresistor + LED
+
+------
+
+### 🟢 **Basic Level**
+
+**1. Replace the Threshold Magic Number**
+
+Turn the hardcoded brightness threshold into a clearly named constant.
+
+------
+
+**2. Move LED Logic to a Function**
+
+Extract the LED on/off behavior into a reusable function.
+
+------
+
+### 🟡 **Intermediate Level**
+
+**3. Add a Semantic Enum for Light Levels**
+
+Model the light levels as an enum instead of using plain numbers or booleans.
+
+------
+
+**4. Structure Sensor Data with an Interface**
+
+Create a strongly typed object that tracks the sensor value, threshold, and LED state.
+
+------
+
+**5. Add a Type Guard**
+
+Make sure you check if the sensor value is really a number before using it.
+
+------
+
+### 🔴 **Advanced Level**
+
+**6. Use a Branded Type for the Sensor Value**
+
+Prevent the raw sensor value from being accidentally passed into unrelated functions.
+
+------
+
+**7. Create a Discriminated Union for Events**
+
+Model two kinds of events (e.g., data and change) and handle them in a type-safe way.
+
+------
+
+**8. Make a Readonly Snapshot of Your State**
+
+Create a readonly version of your state object and use it for logging.
+
+------
+
+**9. Validate Your State with Zod**
+
+Use runtime validation to make sure your sensor data is always valid.
+
+------
+
+**10. Write a Generic Evaluation Function**
+
+Write a function that evaluates whether a value is below a threshold, but make sure it only works for valid input types.
+
+------
+
+## Part 2: Dual Photoresistor + Servo + LED
+
+------
+
+### 🟢 **Basic Level**
+
+**1. Extract the Threshold**
+
+Replace the repeated threshold value with a constant.
+
+------
+
+**2. Add Proper Type Annotations**
+
+Explicitly annotate your data object and key functions with TypeScript types.
+
+------
+
+### 🟡 **Intermediate Level**
+
+**3. Use an Enum for Servo Direction**
+
+Define an enum for `LEFT`, `CENTER`, and `RIGHT` servo positions.
+
+------
+
+**4. Refactor Servo Logic into a Function**
+
+Write a separate function to determine where the servo should turn.
+
+------
+
+**5. Model the Dual-Sensor State**
+
+Create a typed object that holds left/right values and threshold.
+
+------
+
+**6. Create a Function to Detect “Night Mode”**
+
+Move the dim-light logic into its own function.
+
+------
+
+### 🔴 **Advanced Level**
+
+**7. Apply Branded Types to Sensor Values**
+
+Ensure raw sensor values are not used in the wrong places by branding them.
+
+------
+
+**8. Define a Discriminated Union for Sensor Updates**
+
+Model left/right sensor updates with a typed union.
+
+------
+
+**9. Replace Event Listeners with a Shared Function**
+
+Use the union type from the previous step to handle both sensors in a single function.
+
+------
+
+**10. Create an Immutable Snapshot**
+
+Log the current state using a readonly version of your state object.
+
+------
+
+**11. Add Runtime Validation with Zod**
+
+Use Zod to validate the sensor data structure at runtime.
